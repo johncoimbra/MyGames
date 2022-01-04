@@ -18,18 +18,37 @@ class AddEditViewController: UIViewController {
     @IBOutlet weak var btCover: UIButton!
     @IBOutlet weak var ivCover: UIImageView!
     
+    var game: Game!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        
     }
     
     
     @IBAction func addEditCover(_ sender: UIButton) {
+        
     }
     
-
+    @IBAction func addEditGame(_ sender: Any) {
+        if game == nil {
+            game = Game(context: context)
+        }
+        game.title = tfTitle.text
+        game.releaseDate = dpReleaseDate.date
+        
+        do {
+            try context.save()
+        } catch {
+            print(error.localizedDescription)
+        }
+        navigationController?.popViewController(animated: true)
+        
+        
+    }
+    
     /*
     // MARK: - Navigation
 

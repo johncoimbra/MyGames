@@ -66,7 +66,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="ivCiver" destination="KcE-pk-byK" id="DEw-Sv-gfb"/>
+                                    <outlet property="ivCover" destination="KcE-pk-byK" id="et5-Er-cT0"/>
                                     <outlet property="lbConsole" destination="16y-8f-3CC" id="nE5-O3-tec"/>
                                     <outlet property="lbTitle" destination="JtD-4h-s47" id="PI3-Jv-ERw"/>
                                     <segue destination="3B3-Fe-4yW" kind="show" id="M5m-Df-LmC"/>

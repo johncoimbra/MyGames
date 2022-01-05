@@ -9,8 +9,6 @@ import UIKit
 
 class AddEditViewController: UIViewController {
     
-    
-    
     @IBOutlet weak var tfTitle: UITextField!
     @IBOutlet weak var tfConsole: UITextField!
     @IBOutlet weak var dpReleaseDate: UIDatePicker!
@@ -20,11 +18,23 @@ class AddEditViewController: UIViewController {
     
     var game: Game!
     
+    lazy var pickerView: UIPickerView = {
+        let pickerView = UIPickerView()
+        pickerView.delegate = self
+        pickerView.dataSource = self
+        return pickerView
+    } ()
+    
+    var consolesManager = ConsolesManager.shared
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        
+        tfConsole.inputView = pickerView
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        consolesManager.loadConsoles(with: context)
     }
     
     
@@ -48,15 +58,19 @@ class AddEditViewController: UIViewController {
         
         
     }
-    
-    /*
-    // MARK: - Navigation
+}
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+extension AddEditViewController: UIPickerViewDelegate, UIPickerViewDataSource {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
     }
-    */
-
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return consolesManager.consoles.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        let console = consolesManager.consoles[row]
+        return console.name
+    }
 }

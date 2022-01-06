@@ -66,7 +66,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="ivCiver" destination="KcE-pk-byK" id="DEw-Sv-gfb"/>
+                                    <outlet property="ivCover" destination="KcE-pk-byK" id="et5-Er-cT0"/>
                                     <outlet property="lbConsole" destination="16y-8f-3CC" id="nE5-O3-tec"/>
                                     <outlet property="lbTitle" destination="JtD-4h-s47" id="PI3-Jv-ERw"/>
                                     <segue destination="3B3-Fe-4yW" kind="show" id="M5m-Df-LmC"/>
@@ -80,6 +80,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Lista de Jogos" id="m6X-1k-Udu">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="9gh-2y-g7L">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <segue destination="fj4-fs-duT" kind="show" id="d3t-1x-nva"/>
                             </connections>
@@ -99,22 +100,22 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <view key="tableFooterView" contentMode="scaleToFill" id="XVY-Xa-llv">
-                            <rect key="frame" x="0.0" y="110.5" width="414" height="0.0"/>
+                            <rect key="frame" x="0.0" y="126.5" width="414" height="0.0"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="fUY-48-G3a" style="IBUITableViewCellStyleDefault" id="R3L-7f-AEH">
-                                <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="59.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="R3L-7f-AEH" id="BDf-Qg-PeU">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="59.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fUY-48-G3a">
-                                            <rect key="frame" x="20" y="0.0" width="374" height="43.5"/>
+                                            <rect key="frame" x="20" y="0.0" width="374" height="59.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -129,6 +130,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Lista de Plataformas" id="5ew-m6-ffR">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="eXI-HX-5Cg">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <action selector="addConsole:" destination="ltn-l0-Lqe" id="70p-qP-rDp"/>
                             </connections>
@@ -147,6 +149,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="ZqU-de-ght">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" name="second"/>
                         <color key="barTintColor" name="second"/>
                     </navigationBar>
                     <connections>
@@ -161,10 +164,11 @@
         <scene sceneID="Y3g-lp-KNf">
             <objects>
                 <navigationController id="frU-6m-ypW" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Jogos" selectedImage="game" id="cze-89-xjK"/>
+                    <tabBarItem key="tabBarItem" title="Jogos" image="game" id="cze-89-xjK"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="xbY-IG-BF8">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" name="main"/>
                         <color key="barTintColor" name="main"/>
                     </navigationBar>
                     <connections>
@@ -302,7 +306,11 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FZc-LW-EbI">
-                                <rect key="frame" x="173.5" y="547" width="67" height="31"/>
+                                <rect key="frame" x="51.5" y="496" width="311" height="133"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="311" id="VUI-Zh-lqj"/>
+                                    <constraint firstAttribute="height" constant="133" id="iGm-rb-VX4"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Toque para adicionar a imagem de capa"/>
                                 <connections>
@@ -313,8 +321,6 @@
                         <viewLayoutGuide key="safeArea" id="xOi-Om-Ewx"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="FZc-LW-EbI" firstAttribute="height" secondItem="15D-rT-sSL" secondAttribute="height" multiplier="0.0750605" id="2FP-Pq-e7k"/>
-                            <constraint firstItem="FZc-LW-EbI" firstAttribute="width" secondItem="15D-rT-sSL" secondAttribute="width" multiplier="0.175393" id="41R-Oq-wiq"/>
                             <constraint firstItem="Uxy-4Z-Zbs" firstAttribute="bottom" secondItem="xOi-Om-Ewx" secondAttribute="bottom" constant="16" id="8oV-cY-ZAW"/>
                             <constraint firstItem="Uxy-4Z-Zbs" firstAttribute="leading" secondItem="xOi-Om-Ewx" secondAttribute="leading" constant="16" id="AUS-ub-hMo"/>
                             <constraint firstItem="ktz-7J-aVO" firstAttribute="leading" secondItem="xOi-Om-Ewx" secondAttribute="leading" constant="16" id="E9V-7f-Yar"/>
@@ -322,10 +328,8 @@
                             <constraint firstItem="xOi-Om-Ewx" firstAttribute="trailing" secondItem="9Do-bt-6Vl" secondAttribute="trailing" constant="16" id="Hx1-tC-OaB"/>
                             <constraint firstItem="9Do-bt-6Vl" firstAttribute="leading" secondItem="xOi-Om-Ewx" secondAttribute="leading" constant="16" id="Q7P-MY-Axz"/>
                             <constraint firstItem="d7K-43-HrB" firstAttribute="top" secondItem="xOi-Om-Ewx" secondAttribute="top" constant="16" id="S6R-n4-Aq6"/>
-                            <constraint firstItem="FZc-LW-EbI" firstAttribute="centerY" secondItem="15D-rT-sSL" secondAttribute="centerY" id="St8-Uy-shZ"/>
                             <constraint firstItem="xOi-Om-Ewx" firstAttribute="trailing" secondItem="ktz-7J-aVO" secondAttribute="trailing" constant="16" id="UB5-wN-41b"/>
                             <constraint firstItem="wGm-AK-sTM" firstAttribute="top" secondItem="ktz-7J-aVO" secondAttribute="bottom" constant="12" id="Uyx-St-ZOh"/>
-                            <constraint firstItem="FZc-LW-EbI" firstAttribute="centerX" secondItem="15D-rT-sSL" secondAttribute="centerX" id="VVK-WZ-sGh"/>
                             <constraint firstItem="xOi-Om-Ewx" firstAttribute="trailing" secondItem="Uxy-4Z-Zbs" secondAttribute="trailing" constant="16" id="Y64-0i-dCa"/>
                             <constraint firstItem="d7K-43-HrB" firstAttribute="leading" secondItem="xOi-Om-Ewx" secondAttribute="leading" constant="16" id="bzx-uu-ifJ"/>
                             <constraint firstItem="15D-rT-sSL" firstAttribute="leading" secondItem="xOi-Om-Ewx" secondAttribute="leading" constant="16" id="cMb-gU-0yo"/>
@@ -336,13 +340,16 @@
                             <constraint firstItem="xOi-Om-Ewx" firstAttribute="trailing" secondItem="15D-rT-sSL" secondAttribute="trailing" constant="16" id="lXX-nn-Wxf"/>
                             <constraint firstItem="O5M-Zr-JBT" firstAttribute="top" secondItem="9Do-bt-6Vl" secondAttribute="bottom" constant="8" id="nW6-gl-4CA"/>
                             <constraint firstItem="xOi-Om-Ewx" firstAttribute="trailing" secondItem="d7K-43-HrB" secondAttribute="trailing" constant="16" id="nz9-ZA-EdY"/>
+                            <constraint firstItem="FZc-LW-EbI" firstAttribute="centerY" secondItem="15D-rT-sSL" secondAttribute="centerY" id="sPN-OU-oNP"/>
                             <constraint firstItem="ktz-7J-aVO" firstAttribute="top" secondItem="d7K-43-HrB" secondAttribute="bottom" constant="10" id="sif-g3-Rbm"/>
                             <constraint firstItem="wGm-AK-sTM" firstAttribute="leading" secondItem="xOi-Om-Ewx" secondAttribute="leading" constant="16" id="uBv-5i-HK2"/>
+                            <constraint firstItem="FZc-LW-EbI" firstAttribute="centerX" secondItem="15D-rT-sSL" secondAttribute="centerX" id="vQi-Ev-0En"/>
                             <constraint firstItem="15D-rT-sSL" firstAttribute="top" secondItem="O5M-Zr-JBT" secondAttribute="bottom" constant="4" id="xTL-E8-pI7"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Adicionar Novo Jogo" largeTitleDisplayMode="never" id="tPW-oN-rGf"/>
                     <connections>
+                        <outlet property="btAddEdit" destination="Uxy-4Z-Zbs" id="LeD-Tr-S0d"/>
                         <outlet property="btCover" destination="FZc-LW-EbI" id="jcf-d7-nOO"/>
                         <outlet property="dpReleaseDate" destination="9Do-bt-6Vl" id="3jg-QS-3b4"/>
                         <outlet property="ivCover" destination="15D-rT-sSL" id="LUG-Fu-LM6"/>
@@ -376,7 +383,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="M5X-uf-5OP"/>
+        <segue reference="d3t-1x-nva"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" name="AccentColor"/>
     <resources>

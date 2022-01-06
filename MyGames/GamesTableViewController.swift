@@ -1,10 +1,3 @@
-//
-//  GamesTableViewController.swift
-//  MyGames
-//
-//  Created by Luis Eduardo Silva Oliveira on 03/01/22.
-//
-
 import UIKit
 import CoreData
 

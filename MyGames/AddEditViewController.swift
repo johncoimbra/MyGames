@@ -44,6 +44,8 @@ class AddEditViewController: UIViewController {
         prepareConsoleTextField()
         btCover.isHidden = false
         
+        
+        
     }
     
     func prepareConsoleTextField() {

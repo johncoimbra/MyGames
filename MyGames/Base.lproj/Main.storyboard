@@ -69,7 +69,7 @@
                                     <outlet property="ivCover" destination="KcE-pk-byK" id="et5-Er-cT0"/>
                                     <outlet property="lbConsole" destination="16y-8f-3CC" id="nE5-O3-tec"/>
                                     <outlet property="lbTitle" destination="JtD-4h-s47" id="PI3-Jv-ERw"/>
-                                    <segue destination="3B3-Fe-4yW" kind="show" id="M5m-Df-LmC"/>
+                                    <segue destination="3B3-Fe-4yW" kind="show" identifier="gameSegue" id="M5m-Df-LmC"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -82,7 +82,7 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="9gh-2y-g7L">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
-                                <segue destination="fj4-fs-duT" kind="show" id="d3t-1x-nva"/>
+                                <segue destination="fj4-fs-duT" kind="show" identifier="newGameSegue" id="d3t-1x-nva"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -195,17 +195,23 @@
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Plataforma" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zkx-g9-bGD">
                                 <rect key="frame" x="16" y="141" width="382" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="yJW-ht-AzA"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ano de Lançamento" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XnR-tB-LTs">
                                 <rect key="frame" x="16" y="168" width="382" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="JAi-9J-C4e"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="Kcu-fQ-Ylx">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="Kcu-fQ-Ylx">
                                 <rect key="frame" x="16" y="205" width="382" height="588"/>
                             </imageView>
                         </subviews>
@@ -383,7 +389,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="d3t-1x-nva"/>
+        <segue reference="M5X-uf-5OP"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" name="AccentColor"/>
     <resources>
